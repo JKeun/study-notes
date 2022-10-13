@@ -24,8 +24,6 @@
 ![](https://miro.medium.com/max/640/1*fKlYtetGpfWDw0x7rdO6jQ.png)
 
 ## Proposed Structural Layout
-![](https://miro.medium.com/max/720/1*RQ67cmHwVHNW_ciezOvcag.png)
-
 ```
 project
 - some_function.py
