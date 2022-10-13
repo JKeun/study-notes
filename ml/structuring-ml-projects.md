@@ -1,0 +1,54 @@
+# Structuring Macinne Learning projects
+출처: https://towardsdatascience.com/structuring-machine-learning-projects-be473775a1b6
+
+## ML 프로젝트의 본질
+- 현실에서 프로젝트내 `ML Code`(ML모델이 들어가는 부분)는 극히 일부분임
+- Software 프로젝트와 거의 동일하게 바라봐야 함
+![](https://miro.medium.com/max/1400/1*RPBByp0ghAVu0CSeEQm1Tw.png)
+
+## 왜 구조에 대해서 신경써야하는가?
+### 1. 미래의 너에게 도움이 된다
+- 지금 작성하는 코드는 분명 내일이 되면 구식이다.
+- 과거에 작성한 코드를 수정하는데 `make_column.py`, `new_make_column.py` 또는 `fixed_make_column.py`를 실행해야 하는지 고민이 된다면 HDW(Highly Disorganized Work) 증상이다.
+- 좋은 프로젝트는 과거의 작업으로 돌아가는 것을 행복하게 해준다.
+
+### 2. 다른 사람에게 도움이 된다
+- 다른 사람이 너의 프로젝트를 보기에 쉽다.
+- 잘 조직화된 프로젝트는 그 자체로 문서화 되어 공부나 발표에 활용될 수 있다.
+
+### 3. Reproducibility(재현성)
+- 딥러닝, 머신러닝, NLP 등의 분야에서 가장 중요한 것은 `재현성`
+- 좋은 프로젝트는 아래 시스템 아키텍쳐를 구축하는데 도움이 된다.
+  - 재현 가능한 파이프라인
+  - 일반성과 확장성을 모두 확보
+![](https://miro.medium.com/max/640/1*fKlYtetGpfWDw0x7rdO6jQ.png)
+
+## Proposed Structural Layout
+![](https://miro.medium.com/max/720/1*RQ67cmHwVHNW_ciezOvcag.png)
+
+```
+project
+- some_function.py
+- data
+  - external     <-- Third party data(Immutable)
+  - interim      <-- Transformed intermediate data, not ready for modeling
+  - processed    <-- Prepared data, ready for modelinf
+  - raw          <-- Immutable original data
+- models         <-- Serialized model
+- notebooks      <-- Jupyter notebooks for EDA, communication and prototyping
+- src            <-- Folder containing project source code
+  - data         <-- Folder containing scripts to download/generate data
+  - features     <-- Folder containing scripts to transform data for modeling
+  - model        <-- Folder containing scripts to train and predict
+- test
+  - test_some_function.py
+```
+
+Tips
+- `notebooks` 폴더 내에 하부 폴더를 만들 수 있음 e.g., `notebooks/EDA`, `notebooks/PoC`
+- 노트북 네이밍에 적절한 규칙을 사용하면 구분이 편함
+  -  `<step>-<user>-<decription>.ipynb` e.g., `01-jkeun-eda.ipynb`
+
+## 기타 다른 구조화 예시
+![](https://miro.medium.com/max/720/1*sBqK_JA3Sh6ebWkYBEKgUw.png)
+![](https://lh5.googleusercontent.com/XTLsDEqlWzidMzudcmG4n3jPp2iCi82S2twX05PjTxMXYIDUaGlSdm3yml1GIn8TKeBup9XoyQnnq6cTxNLgNkgzZT-0eh_TcyRTfOjpuS8acVc9X0hPXk30fJmKsacQUkUKYr0W)
