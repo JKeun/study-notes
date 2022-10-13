@@ -4,6 +4,7 @@
 ## ML 프로젝트의 본질
 - 현실에서 프로젝트내 `ML Code`(ML모델이 들어가는 부분)는 극히 일부분임
 - Software 프로젝트와 거의 동일하게 바라봐야 함
+
 ![](https://miro.medium.com/max/1400/1*RPBByp0ghAVu0CSeEQm1Tw.png)
 
 ## 왜 구조에 대해서 신경써야하는가?
@@ -21,6 +22,7 @@
 - 좋은 프로젝트는 아래 시스템 아키텍쳐를 구축하는데 도움이 된다.
   - 재현 가능한 파이프라인
   - 일반성과 확장성을 모두 확보
+
 ![](https://miro.medium.com/max/640/1*fKlYtetGpfWDw0x7rdO6jQ.png)
 
 ## Proposed Structural Layout
