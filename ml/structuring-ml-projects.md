@@ -1,18 +1,23 @@
 # Structuring Macinne Learning projects
+
 출처: https://towardsdatascience.com/structuring-machine-learning-projects-be473775a1b6
 
 ## ML 프로젝트의 본질
+
 - 현실에서 프로젝트내 `ML Code`(ML모델이 들어가는 부분)는 극히 일부분임
 - Software 프로젝트와 거의 동일하게 바라봐야 함
 ![](https://miro.medium.com/max/1400/1*RPBByp0ghAVu0CSeEQm1Tw.png)
 
 ## 왜 구조에 대해서 신경써야하는가?
+
 ### 1. 미래의 너에게 도움이 된다
+
 - 지금 작성하는 코드는 분명 내일이 되면 구식이다.
 - 과거에 작성한 코드를 수정하는데 `make_column.py`, `new_make_column.py` 또는 `fixed_make_column.py`를 실행해야 하는지 고민이 된다면 HDW(Highly Disorganized Work) 증상이다.
 - 좋은 프로젝트는 과거의 작업으로 돌아가는 것을 행복하게 해준다.
 
 ### 2. 다른 사람에게 도움이 된다
+
 - 다른 사람이 너의 프로젝트를 보기에 쉽다.
 - 잘 조직화된 프로젝트는 그 자체로 문서화 되어 공부나 발표에 활용될 수 있다.
 
@@ -21,9 +26,10 @@
 - 좋은 프로젝트는 아래 시스템 아키텍쳐를 구축하는데 도움이 된다.
   - 재현 가능한 파이프라인
   - 일반성과 확장성을 모두 확보
-![](https://miro.medium.com/max/640/1*fKlYtetGpfWDw0x7rdO6jQ.png)
+  ![](https://miro.medium.com/max/640/1*fKlYtetGpfWDw0x7rdO6jQ.png)
 
 ## Proposed Structural Layout
+
 ![](https://miro.medium.com/max/720/1*RQ67cmHwVHNW_ciezOvcag.png)
 
 ```
